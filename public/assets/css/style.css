@@ -957,8 +957,8 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 
 .img-stretched{
 	width: 100%;
-	height: 200px;
-	background-image: url("/assets/images/explore/Winterfell.png");
+	height: 300px;
 	background-repeat: no-repeat, repeat;
-	 background-size: cover;
+	background-size: cover;
+	background-position-y: center;
 }

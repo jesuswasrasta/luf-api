@@ -30,7 +30,10 @@ function home(response){
 }
 
 function zone(request, response){
-	response.render('pages/zone');
+	let template = fs.readFileSync('views/pages/zone.ejs').toString();
+	const output = ejs.render(template, {zone: request.query.zone});
+
+	response.end(output);
 }
 
 function parkTaken(request, response){
