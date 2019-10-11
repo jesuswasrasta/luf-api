@@ -191,7 +191,7 @@
         <div class="explore-content">
             <div class="row">
                 <div class=" col-md-4 col-sm-6">
-                    <div class="single-explore-item">
+                    <div class="single-explore-item" data="Winterfell">
                         <div class="single-explore-img">
                             <img src="assets/images/explore/Winterfell.png" alt="explore image">
                             <div class="single-explore-img-info">
@@ -220,7 +220,7 @@
                                 <span class="explore-price-box">
 											da <span class="explore-price">5€-15€</span>
 										</span>
-                                <a href="#">posti liberi: <span class="badge"><span class="zone-count" data="Winterfell" /></span></a>
+                                <a href="#">posti liberi: <span class="badge"><span class="zone-count" /></span></a>
                             </p>
                             <div class="explore-person">
                                 <div class="row">
@@ -256,7 +256,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    <div class="single-explore-item">
+                    <div class="single-explore-item" data="KingLanding">
                         <div class="single-explore-img">
                             <img src="assets/images/explore/KingLanding.png" alt="explore image">
                             <div class="single-explore-img-info">
@@ -285,7 +285,7 @@
                                 <span class="explore-price-box">
 											da <span class="explore-price">1€-24€</span>
 										</span>
-                                <a href="#">posti liberi: <span class=badge><span class="zone-count" data="KingLanding" /></span></a>
+                                <a href="#">posti liberi: <span class=badge><span class="zone-count" /></span></a>
                             </p>
                             <div class="explore-person">
                                 <div class="row">
@@ -322,7 +322,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    <div class="single-explore-item">
+                    <div class="single-explore-item" data="HighGarden">
                         <div class="single-explore-img">
                             <img src="assets/images/explore/HighGarden.png" alt="explore image">
                             <div class="single-explore-img-info">
@@ -352,7 +352,7 @@
 											da
 											<span class="explore-price">5€-10€</span>
 										</span>
-                                <a href="#">posti liberi: <span class="badge"><span class="zone-count" data="HighGarden" /></span></a>
+                                <a href="#">posti liberi: <span class="badge"><span class="zone-count" /></span></a>
                             </p>
                             <div class="explore-person">
                                 <div class="row">
@@ -389,7 +389,7 @@
 				</div>
 				<div class="row">
                 <div class=" col-md-4 col-sm-6">
-                    <div class="single-explore-item">
+                    <div class="single-explore-item" data="CasterlyRock">
                         <div class="single-explore-img">
                             <img src="assets/images/explore/CasterlyRock.png" alt="explore image">
                             <div class="single-explore-img-info">
@@ -419,7 +419,7 @@
 											da
 											<span class="explore-price">10€-15€</span>
 										</span>
-                                <a href="#">posti liberi: <span class="badge"><span class="zone-count" data="CasterlyRock" /></span></a>
+                                <a href="#">posti liberi: <span class="badge"><span class="zone-count" /></span></a>
                             </p>
                             <div class="explore-person">
                                 <div class="row">
@@ -731,7 +731,7 @@
 		$(".zone-count").each(function(id, zone) {
 			$.ajax(
 				{
-					url: "/info_parking?zone=" + $(zone).attr("data"),
+					url: "/info_parking?zone=" + $(zone).closest('.single-explore-item').attr("data"),
 					complete: function(data) {
 						$(zone).text(data.responseText);
 					}
