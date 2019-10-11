@@ -29,7 +29,6 @@ function home(response){
 	const output = ejs.render(template, {zones: zones});
 
 	response.end(output);
-	res.render('pages/index')
 }
 
 function parkTaken(request, response){
