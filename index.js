@@ -46,10 +46,10 @@ function parkFreed(request, response){
 
 function parkInfo(request, response){
 	let selectedZone = request.query.zone;
-	response.send(zones[selectedZone]);
+	response.send(''+zones[selectedZone]);
 }
 
 function status(response){
 	console.log(zones);
-	response.send('Free ' + zones);
+	response.send(JSON.stringify(zones));
 }
