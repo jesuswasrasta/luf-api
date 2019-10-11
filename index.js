@@ -9,7 +9,7 @@ var zones = {
 	KingLanding: 100,
 	Winterfell: 50,
 	HighGarden: 40,
-	CastelryRock: 25
+	CasterlyRock: 25
 }
 
 express()
