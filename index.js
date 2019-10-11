@@ -17,6 +17,7 @@ express()
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => home(res))
+  .get('/zone', (req, res) => zone(req, res))
   .get('/start_parking', (req, res) => parkTaken(req, res))
   .get('/end_parking', (req, res) => parkFreed(req, res))
   .get('/info_parking', (req, res) => parkInfo(req, res))
@@ -26,6 +27,10 @@ express()
 
 function home(response){
 	response.render('pages/index');
+}
+
+function zone(request, response){
+	response.render('pages/zone');
 }
 
 function parkTaken(request, response){
