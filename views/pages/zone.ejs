@@ -105,24 +105,24 @@
 <section id="explore" class="explore">
     <div class="container">
         <div class="section-header">
-            <h2>Winterfell</h2>
+            <h2><%= zone %></h2>
         </div><!--/.section-header-->
         <div class="explore-content">
             <div class="row">
                 <div class=" col-md-12 col-sm-12">
                     <div class="single-explore-item">
                         <div class="single-explore-img">
-                            <div class="img-stretched"  />
+                            <div class="img-stretched" style="background-image: url('/assets/images/explore/<%= zone %>.png');"/>
                         </div>
                         <div class="single-explore-txt bg-theme-1">
-                            <h2><a href="#">winterfell</a></h2>
+                            <h2><a href="#"><%= zone %></a></h2>
                             <p class="explore-rating-price">
                                 <span class="explore-rating">5.0</span>
                                 <a href="#"> 10 voti</a>
                                 <span class="explore-price-box">
 											da <span class="explore-price">5€-15€</span>
 										</span>
-                                <a href="#">posti liberi: <span class="badge"><span class="zone-count" data="Winterfell" /></span></a>
+                                <a href="#">posti liberi: <span class="badge"><span class="zone-count" data="<%= zone %>" /></span></a>
                             </p>
                             <div class="explore-person">
                                 <div class="row">
