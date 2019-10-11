@@ -6,10 +6,10 @@ const PORT = process.env.PORT || 5000
 var freeParking = 100
 
 var zones = {
-	KingLanding: 100,
-	Winterfell: 50,
-	HighGarden: 40,
-	CasterlyRock: 25
+	KingLanding: 0,
+	Winterfell: 2,
+	HighGarden: 7,
+	CasterlyRock: 3
 }
 
 express()
