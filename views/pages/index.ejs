@@ -280,7 +280,7 @@
                                 <span class="explore-price-box">
 											da <span class="explore-price">5€-15€</span>
 										</span>
-                                <a href="#">posti liberi: <%= zones['Winterfell'] %></a>
+                                <a href="#">posti liberi: <span class="zone-count" data="Winterfell"></span></a>
                             </p>
                             <div class="explore-person">
                                 <div class="row">
@@ -740,6 +740,13 @@
 <!--Custom JS-->
 <script src="assets/js/custom.js"></script>
 
+<script type="application/javascript">
+	$(document).ready(function() {
+		$(".zone-count").each(function(id, zone) {
+			$(zone).text(<%= zones['Winterfell'] %>);
+		});
+	});
+</script>
 </body>
 
 </html>
