@@ -25,10 +25,7 @@ express()
 
 
 function home(response){
-	let template = fs.readFileSync('views/pages/index.ejs').toString();	
-	const output = ejs.render(template, {zones: zones});
-
-	response.end(output);
+	response.render('pages/index');
 }
 
 function parkTaken(request, response){
