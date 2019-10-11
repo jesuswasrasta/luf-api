@@ -741,7 +741,7 @@
 <script src="assets/js/custom.js"></script>
 
 <script type="application/javascript">
-	$(document).ready(function() {
+	function refresh_counts() {
 		$(".zone-count").each(function(id, zone) {
 			$.ajax(
 				{
@@ -752,6 +752,11 @@
 				}
 			);
 		});
+	}
+
+	$(document).ready(function() {
+		refresh_counts();
+		setInterval(refresh_counts, 2000);
 	});
 </script>
 </body>
