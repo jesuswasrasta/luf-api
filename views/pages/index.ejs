@@ -743,7 +743,14 @@
 <script type="application/javascript">
 	$(document).ready(function() {
 		$(".zone-count").each(function(id, zone) {
-			$(zone).text(<%= zones['Winterfell'] %>);
+			$.ajax(
+				{
+					url: "/info_parking?zone=" + $(zone).attr("data"),
+					complete: function(data) {
+						$(zone).text(data.responseText);
+					}
+				}
+			);
 		});
 	});
 </script>
