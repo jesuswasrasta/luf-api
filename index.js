@@ -47,7 +47,11 @@ function parkFreed(request, response){
 
 function parkInfo(request, response){
 	let selectedZone = request.query.zone;
-	response.send(''+zones[selectedZone]);
+	let count = zones[selectedZone];
+	if (count < 0) {
+	    count = 0;
+    }
+	response.send(''+count);
 }
 
 function status(response){
