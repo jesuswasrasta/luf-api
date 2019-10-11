@@ -113,18 +113,15 @@
         <div class="welcome-hero-serch-box">
             <div class="welcome-hero-form">
                 <div class="single-welcome-hero-form">
-                    <h3>Cosa?</h3>
-                    <form action="index.html">
-                        <input type="text" placeholder="Es: parcheggio gratuito, parcheggio custodito, garage"/>
-                    </form>
-                    <div class="welcome-hero-form-icon">
-                        <i class="flaticon-list-with-dots"></i>
-                    </div>
-                </div>
-                <div class="single-welcome-hero-form">
                     <h3>Zona</h3>
                     <form action="index.html">
-                        <input type="text" placeholder="Es: Milano, Roma, Giussago"/>
+                        <input list="zones" type="text" id="search" placeholder="Es: Winterfell, KingLanding, ..."/>
+						<datalist id="zones">
+							<option value="Winterfell">
+							<option value="KingLanding">
+							<option value="HighGarden">
+							<option value="CasterlyRock">
+						</datalist>
                     </form>
                     <div class="welcome-hero-form-icon">
                         <i class="flaticon-gps-fixed-indicator"></i>
@@ -132,7 +129,7 @@
                 </div>
             </div>
             <div class="welcome-hero-serch">
-                <button class="welcome-hero-btn" onclick="window.location.href='#'">
+                <button class="welcome-hero-btn" onclick="search()">
                     Cerca <i data-feather="search"></i>
                 </button>
             </div>
@@ -671,6 +668,11 @@
 				}
 			);
 		});
+	}
+	
+	function search(){
+		var locationZ = '/zone?zone=' + $('#search').val();
+		window.location.href= locationZ;
 	}
 
 	$(document).ready(function() {

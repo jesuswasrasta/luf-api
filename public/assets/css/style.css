@@ -289,7 +289,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 50%;
+    width: 100%;
     padding: 0 30px;
 }
 .single-welcome-hero-form:first-child{border-right: 1px solid #edeff1;}
