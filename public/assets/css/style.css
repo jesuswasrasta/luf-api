@@ -962,3 +962,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 	background-size: cover;
 	background-position-y: center;
 }
+
+.single-blog-item-img{
+	min-height: 275px;
+}
